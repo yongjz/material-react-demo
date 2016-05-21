@@ -16,6 +16,7 @@ import 'file?name=[name].[ext]!./.htaccess';
 // Import all the third party stuff
 import React from 'react';
 import ReactDOM from 'react-dom';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Provider } from 'react-redux';
 import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
@@ -23,6 +24,7 @@ import FontFaceObserver from 'fontfaceobserver';
 import useScroll from 'react-router-scroll';
 import configureStore from './store';
 
+injectTapEventPlugin();
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
 import styles from 'containers/App/styles.css';
